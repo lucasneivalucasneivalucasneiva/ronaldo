@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Page Title</title>
+    <style id="css">
+        body {
+            background-color: #000;
+            font-family: "Nunito", sans-serif;
+        }
+        body,
+        html {
+            overflow-x: hidden !important;
+        }
+        .blurb h2 {
+            color: #F00;
+            font-weight: 100;
+            font-size: 2.5rem;
+        }
+        .blurb p {  
+            color: #000;
+            font-weight: 100;
+            font-size: 1.125;
+            line-height: 2;
+        }
+        .content {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        .ronaldo{
+            background-color: #964B00;
+        }
+        #navigationBar {
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+        #navigationBar .nav-link {
+            color: #FFF;
+        }
+        #navigationBar .nav-link:hover {
+            color: #F00;
+        }
+        #navigationBar .navbar-brand {
+            color: #F00;
+            font-size: 1.5rem;
+        }
+        #headingGroup span {
+            color: #F00;
+        }
+        #headingGroup h1 {
+            font-weight: 100;
+            font-size: 4rem;
+        }
+        #saxoAudioButton {
+            color: #000;
+            -webkit-text-stroke-width: .01em;
+            -webkit-text-fill-color: #0F0;
+            text-decoration-color: #000;
+            background-color: #C8FFC8;
+        }
+        #nao {
+            color: #000;
+            -webkit-text-stroke-width: .01em;
+            -webkit-text-fill-color: #F00;
+            text-decoration-color: #000;
+            background-color: #FFC8C8;
+        }
+        #pedidoAceito {
+            margin-top: 2.5em;
+        }
+        @media(max-width: 786px) {
+            body,
+            html {
+                overflow-x: hidden !important;
+            }
+            #headingGroup h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body id="pageBody">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark" data-bs-theme="dark" id="navigationBar">
+        <div class="container-fluid">
+            <a class="navbar-brand" onclick="peludo.play();">🐒</a>
+    </nav>
+    <div class="d-grid gap-2 col-10 mx-auto" id="divPedido">
+        <h3 id="pedido">DESEJA CONTINUAR?</h3>
+        <audio src="https://github.com/lucasneivalucasneivalucasneiva/ronaldo/raw/main/atumalaca.mp3"
+            loop id="saxoAudio"></audio>
+            <audio src="https://github.com/lucasneivalucasneivalucasneiva/ronaldo/raw/main/risada%20do%20peludinho.mp4"
+            id="peludo"></audio>
+        <button onclick="playAudio();" type="button" class="btn btn-success btn-lg"
+            id="saxoAudioButton">SIM</button>
+        <button onclick="naoFunc()" type="button" class="btn btn-danger btn-lg" id="nao">NÃO</button>
+    </div class="d-grid gap-2 col-10 mx-auto" id="divSim">
+    <div id="pedidoAceito"></div>
+    <div id="javaScript">
+        <script>
+            const saxoAudioPlay = document.getElementById("saxoAudio");
+            const saxoButton = document.getElementById("saxoAudioButton");
+            const naoButton = document.getElementById("nao");
+            const risada = document.getElementById("peludo");
+            const bodyHtml = document.getElementById("pageBody");
+            const acceptedRequest = `<h3 class="d-grid gap-2 col-10 mx-auto" id="pedido">CADE OS CARA NA CALL CADE OS CARA NA CALL CADE OS CARA NA CALL</h3>`
+            const acceptedPage = `
+            <section class="container-fluid  px-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div id="headingGroup" class="text-center d-none d-lg-block mt-5">
+                        <h1 class="">RO<span>NA</span>LD<span>O</span>🐒</h1>
+                        <h1 class="">RO<span>NA</span>LD<span>O</span>🐒</h1>
+                        <h1 class="">RO<span>NA</span>LD<span>O</span>🐒</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://github.com/lucasneivalucasneivalucasneiva/ronaldo/raw/main/img/ronaldinho%201.png" alt="RONALDO" class="img-fluid">
+                </div>
+            </div>
+            </section>
+            <section class="container-fluid px-0">
+            <div class="row align-items-center content">
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="https://github.com/lucasneivalucasneivalucasneiva/ronaldo/raw/main/img/ronaldinho%202.png" alt="RONALDO" class="img-fluid">
+                </div>
+                <div class="col-md-6 text-center order-1 order-md-2">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                            <h2>O_O</h2>
+                            <p class="lead">
+                                LIGARAM O WIFI NA FLORESTA?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center content">
+                <div class="col-md-6 text-center">
+                    <div class="row justify-content-center">
+                        <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                            <h2>QUE ISSO RAFA?</h2>
+                            <p class="lead">
+                                KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK<br>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-2 order-md-1">
+                    <img src="https://github.com/lucasneivalucasneivalucasneiva/ronaldo/raw/main/img/ronaldinho%203.png" alt="RONALDO" class="img-fluid">
+                </div>
+            </div>
+            </section>
+                                `
+            function naoFunc() {
+                alert("Resposta errada, tente novamente após clicar em OK");
+                peludo.pause();
+                peludo.currentTime = 0;
+                peludo.play();
+
+            }
+            function playAudio() {
+                alert("POPUP");
+                saxoAudioPlay.pause();
+                saxoAudioPlay.currentTime = 0;
+                saxoAudioPlay.play();
+                naoButton.remove();
+                saxoButton.remove();
+                loadPage();
+            }
+            function loadPage() {
+                document.getElementById("pedido").innerHTML = acceptedRequest;
+                document.getElementById("pedidoAceito").innerHTML = acceptedPage;
+                bodyHtml.classList.add("ronaldo");
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
